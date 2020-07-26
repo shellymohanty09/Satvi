@@ -1,0 +1,51 @@
+<html>
+<head>
+  <title>Background Changing</title>
+  <style>
+    body{
+    background-image:white;
+    }
+
+  h1{
+     color:black;
+     font-size:50px;
+  }
+
+  button{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    font-size:32px;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  </style>
+
+</head>
+
+<body>
+  <h1>Satvi's First Website</h1>
+  <button onclick="changeBackground()">Click me</button>
+
+  <script>
+
+  var array = ["linear-gradient(to right,#e96443,#904e95)",
+                "linear-gradient(to right,#43cea2,#185a9d)",
+                "linear-gradient(to right,#3D7EAA,#FFE47A)",
+                "linear-gradient(to right,#5C258D,#4389A2)",
+                "linear-gradient(to right,#2BC0E4,#EAECC6)",
+                "linear-gradient(to right,#AA076B,#61045F)"
+              ];
+
+
+  function changeBackground(){
+      document.body.style.backgroundImage = array[Math.floor(Math.random() * array.length)];
+    }
+
+  </script>
+
+</body>
+
+
+</html>
